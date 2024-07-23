@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
+
+    <xacro:arg name="is_sim" default="true"/>
+    
     <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_gazebo.xacro"/>
     <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_ros2_control.xacro"/>
 
@@ -43,7 +46,7 @@
         </collision>
     </link>
 
-    <joint name="virtual_link" type="fixed">
+    <joint name="virtual_joint" type="fixed">
         <parent link="world"/>
         <child link="base_link"/>
         <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>

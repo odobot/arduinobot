@@ -6,6 +6,7 @@
         "limitSymbolsToIncludedHeaders": false
       },
       "includePath": [
+        "/home/cheech/Desktop/Workspace/cded/install/arduinobot_msgs/include/**",
         "/home/cheech/ws_moveit2/install/moveit_visual_tools/include/**",
         "/home/cheech/ws_moveit2/install/rviz_visual_tools/include/**",
         "/home/cheech/ws_moveit2/install/moveit_task_constructor_visualization/include/**",
@@ -46,7 +47,12 @@
         "/home/cheech/ws_moveit2/install/kortex_driver/include/**",
         "/home/cheech/ws_moveit2/install/kortex_api/include/**",
         "/opt/ros/humble/include/**",
+        "/home/cheech/Desktop/Workspace/cded/src/arduinobot_controller/include/**",
+        "/home/cheech/Desktop/Workspace/cded/src/arduinobot_cpp_examples/include/**",
         "/home/cheech/Desktop/Workspace/cded/src/arduinobot_description/include/**",
+        "/home/cheech/Desktop/Workspace/cded/src/arduinobot_moveit/include/**",
+        "/home/cheech/Desktop/Workspace/cded/src/arduinobot_msgs/include/**",
+        "/home/cheech/Desktop/Workspace/cded/src/arduinobot_utils/include/**",
         "/usr/include/**"
       ],
       "name": "ROS",

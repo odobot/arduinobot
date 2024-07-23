@@ -1,24 +1,24 @@
 controller_manager:
   ros__parameters:
-    update_rate: 10
+    update_rate: 10 # Hz
 
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
+    # gripper_controller:
+    #   type: forward_command_controller/ForwardCommandController
+
+    # will use the commented line above to close the gripper using the command below and open it by changing the data: [-1]
+    #     ros2 topic  pub  /gripper_controller/commands std_msgs/msg/Float64MultiArray "layout:
+    #   dim: []
+    #   data_offset: 0
+    # data: [0]"
+
     gripper_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-    # gripper_controller:
-    #   type: forward_command_controller/ForwardCommandController
-# will use the commented line above to close the gripper using the command below and open it by changing the data: [-1]
-#     ros2 topic  pub  /gripper_controller/commands std_msgs/msg/Float64MultiArray "layout:
-#   dim: []
-#   data_offset: 0
-# data: [0]"
-    
     joint_state_broadcaster:
       type: joint_state_broadcaster/JointStateBroadcaster
-
 
 arm_controller:
   ros__parameters:
@@ -34,20 +34,19 @@ arm_controller:
       - position
 
     open_loop_control: true
-    allow_intergration_in_goal_trajectories: true
+    allow_integration_in_goal_trajectories: true
 
 gripper_controller:
   ros__parameters:
     joints:
       - joint_4
-
     # interface_name: position
-
+      
     command_interfaces:
       - position
 
     state_interfaces:
-      -position
+      - position
 
     open_loop_control: true
-    allow_intergration_in_goal_trajectories: true
+    allow_integration_in_goal_trajectories: true
